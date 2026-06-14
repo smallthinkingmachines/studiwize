@@ -165,8 +165,8 @@ const html = `<!DOCTYPE html>
         <div class="mark">${MARK_SVG}</div>
         <div class="wm-text">studi<b>wize</b></div>
       </div>
-      <h1>The full book,<br><span class="soft">built for students.</span></h1>
-      <p>Upload a textbook you already own. Chapter-marked audio for your commute + a study guide for your desk.</p>
+      <h1>Your textbook,<br><span class="soft">turned into audio and a study guide.</span></h1>
+      <p>Upload a PDF or EPUB you already own. studiwize turns the full text into chapter-marked audio for your commute, plus a study guide for review.</p>
     </div>
     <div class="right">
       <div class="pill">

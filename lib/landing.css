@@ -25,7 +25,15 @@ body { overflow-x: hidden; }
 }
 .nav-links a:hover { color: var(--ink); }
 .nav-cta { padding: 10px 18px; font-size: 15px; }
+.nav-links .nav-cta,
+.nav-links .nav-cta:hover { color: var(--on-accent); }
+.nav-cta-compact { display: none; }
 @media (max-width: 720px){ .nav-links .navlink { display: none; } }
+@media (max-width: 380px){
+  .nav-cta { padding-inline: 15px; }
+  .nav-cta-full { display: none; }
+  .nav-cta-compact { display: inline; }
+}
 
 /* ── section rhythm ──────────────────────────────────────── */
 section { position: relative; }
@@ -42,10 +50,11 @@ section { position: relative; }
 /* ── hero ────────────────────────────────────────────────── */
 .hero { padding-top: 64px; padding-bottom: 88px; overflow: hidden; }
 .hero-grid {
-  display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 56px; align-items: center;
+  display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); gap: 56px; align-items: center;
 }
+.hero-grid > * { min-width: 0; }
 @media (max-width: 900px){
-  .hero-grid { grid-template-columns: 1fr; gap: 48px; }
+  .hero-grid { grid-template-columns: minmax(0, 1fr); gap: 48px; }
   .hero { padding-top: 40px; padding-bottom: 56px; }
 }
 .hero h1 {
@@ -58,6 +67,10 @@ section { position: relative; }
   margin: 22px 0 0; max-width: 30ch;
 }
 .hero-cta { display: flex; gap: 12px; margin-top: 32px; flex-wrap: wrap; }
+@media (max-width: 520px){
+  .hero-cta { flex-direction: column; }
+  .hero-cta .btn { width: 100%; }
+}
 .hero-pre { margin: 12px 0 0; font-size: 13px; color: var(--ink-3); letter-spacing: 0.01em; }
 .hero-meta {
   margin-top: 26px; display: flex; gap: 22px; flex-wrap: wrap;
