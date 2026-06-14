@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>studiwize — the full book, built for students</title>
+<meta name="description" content="Upload a textbook you already own. Get the full text as chapter-marked audio for your commute, plus a study guide for when you're back at a desk. No file expiry. No character caps." />
+<link rel="canonical" href="https://studiwize.com/" />
+
+<!-- Open Graph -->
+<meta property="og:type"        content="website" />
+<meta property="og:url"         content="https://studiwize.com/" />
+<meta property="og:title"       content="studiwize — the full book, built for students" />
+<meta property="og:description" content="Upload a textbook you already own. Chapter-marked audio for your commute + a study guide for your desk. One upload, two study artifacts." />
+<meta property="og:image"       content="https://studiwize.com/og-image.png" />
+<meta property="og:image:width"  content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:site_name"   content="studiwize" />
+
+<!-- Twitter / X card -->
+<meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:title"       content="studiwize — the full book, built for students" />
+<meta name="twitter:description" content="Upload a textbook you already own. Chapter-marked audio for your commute + a study guide for your desk." />
+<meta name="twitter:image"       content="https://studiwize.com/og-image.png" />
+
+<!-- Theme -->
+<meta name="theme-color" content="#F4F1EA" />
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+<!-- Fonts: preconnect first, then stylesheet (non-render-blocking) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Mono:wght@400;500&display=swap"
+  media="print" onload="this.media='all'" />
+<noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Mono:wght@400;500&display=swap" />
+</noscript>
+
+<link rel="stylesheet" href="lib/brand.css" />
+<link rel="stylesheet" href="lib/landing.css" />
+</head>
+<body>
+
+<!-- ─────────── NAV ─────────── -->
+<header class="nav" role="banner">
+  <div class="wrap nav-in">
+    <a class="wm" href="#top" aria-label="studiwize home">
+      <span class="mark" style="font-size:28px" aria-hidden="true"></span>
+      <span class="wm-text">studi<b>wize</b></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a class="navlink" href="#problem">Why</a>
+      <a class="navlink" href="#wedge">The difference</a>
+      <a class="navlink" href="#how">How it works</a>
+      <a class="btn btn-dark nav-cta" href="#waitlist">Get early access</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ─────────── HERO ─────────── -->
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow reveal">Bring your own files · PDF &amp; EPUB</span>
+      <h1 id="hero-heading" class="reveal">The full book,<br /><span class="soft">built for students.</span></h1>
+      <p class="hero-sub reveal">Upload a textbook you already own. Get the entire text as chapter-marked audio for your commute — plus a study guide for when you're back at a desk.</p>
+      <div class="hero-cta reveal">
+        <a class="btn btn-primary" href="#waitlist">
+          <span class="mk" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.2v13.6c0 .9 1 1.5 1.8 1L20 12.9c.7-.45.7-1.5 0-1.95L9.8 4.2C9 3.7 8 4.3 8 5.2Z"/></svg>
+          </span>
+          Try it free
+        </a>
+        <a class="btn btn-ghost" href="#how">See how it works</a>
+      </div>
+      <div class="hero-meta reveal" aria-label="Key features">
+        <span><i class="dot" aria-hidden="true"></i> No file expiry</span>
+        <span><i class="dot" aria-hidden="true"></i> No character caps</span>
+        <span><i class="dot" aria-hidden="true"></i> Works offline once built</span>
+      </div>
+      <div class="trust reveal" aria-label="Quick stats">
+        <div class="trust-row">
+          <div class="trust-item">
+            <span class="trust-num">11 hrs</span>
+            <span class="trust-cap">of audio from a 300-page textbook</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-num">2 things</span>
+            <span class="trust-cap">one upload → audio + study guide</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- phone with working player -->
+    <div class="phone-stage reveal" aria-label="Audio player demo">
+      <div class="phone" role="img" aria-label="studiwize audio player showing Chapter 7: Competitive Markets">
+        <div class="phone-screen playing" id="plScreen">
+          <div class="phone-notch" aria-hidden="true"></div>
+          <div class="pl">
+            <div class="pl-top">
+              <span class="stat-label">Now playing</span>
+              <span style="display:flex;align-items:center;gap:6px;" aria-label="Offline">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 10v4M7 7v10M12 4v16M17 8v8M21 11v2"/></svg>
+                offline
+              </span>
+            </div>
+
+            <div class="pl-cover" aria-hidden="true">
+              <span class="mark cover-mark"></span>
+              <div class="cover-eq"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <span class="cover-cap">your_upload.pdf</span>
+            </div>
+
+            <div class="pl-meta">
+              <div class="pl-ch" id="plCh">Chapter 07</div>
+              <div class="pl-title" id="plTitle">Competitive Markets</div>
+              <div class="pl-book">Principles of Microeconomics</div>
+            </div>
+
+            <div class="pl-scrub">
+              <div class="pl-bar" id="plBar" role="slider" aria-label="Playback position" aria-valuemin="0" aria-valuemax="100" aria-valuenow="22" tabindex="0">
+                <div class="pl-fill" id="plFill"></div>
+              </div>
+              <div class="pl-time" aria-hidden="true"><span id="plCur">12:06</span><span id="plRem">-42:54</span></div>
+            </div>
+
+            <div class="pl-ctrls">
+              <button class="pl-btn" id="plBack" aria-label="Back 15 seconds">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 7.5A9 9 0 1 1 3 12"/><path d="M3.5 3.5v4h4"/><text x="12" y="15" font-size="7" font-family="DM Mono, monospace" fill="currentColor" stroke="none" text-anchor="middle">15</text></svg>
+              </button>
+              <button class="pl-btn pl-play" id="plPlay" aria-label="Play"></button>
+              <button class="pl-btn" id="plFwd" aria-label="Forward 30 seconds">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 7.5A9 9 0 1 0 21 12"/><path d="M20.5 3.5v4h-4"/><text x="12" y="15" font-size="7" font-family="DM Mono, monospace" fill="currentColor" stroke="none" text-anchor="middle">30</text></svg>
+              </button>
+            </div>
+
+            <div class="pl-foot">
+              <button class="pl-speed" id="plSpeed" aria-label="Playback speed">1×</button>
+              <button class="pl-chaptoggle" id="plSheetToggle" aria-expanded="false" aria-controls="plSheet">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+                10 chapters
+              </button>
+            </div>
+          </div>
+
+          <!-- chapter sheet -->
+          <div class="pl-sheet" id="plSheet" aria-label="Chapter list" role="dialog" aria-modal="true" hidden>
+            <div class="pl-sheet-grip" aria-hidden="true"></div>
+            <h4>Chapters <button id="plSheetClose" style="float:right;background:none;border:0;color:var(--ink-2-on-night);font-size:13px;cursor:pointer;">Done</button></h4>
+            <div class="ch-list" id="chList" role="list"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── PROBLEM ─────────── -->
+<section class="problem sec-pad" id="problem" aria-labelledby="problem-heading">
+  <div class="wrap prob-grid">
+    <div class="reveal">
+      <span class="eyebrow">The dead hour</span>
+      <h2 id="problem-heading" class="sec-title">Your commute is study time you keep throwing away.</h2>
+      <p class="sec-sub">You've got the reading. You've got 40 minutes each way on the train, the bus, the highway. The two never meet — because a textbook isn't something you can do at 65 mph.</p>
+      <div class="prob-list" role="list">
+        <div class="prob-item" role="listitem">
+          <span class="prob-x" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+          </span>
+          <p><b>Skim-and-forget summaries</b> hand you someone else's notes. You wanted to actually read the book.</p>
+        </div>
+        <div class="prob-item" role="listitem">
+          <span class="prob-x" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+          </span>
+          <p><b>Read-aloud apps</b> drone through a wall of text with no chapters, no structure, no way to review after.</p>
+        </div>
+        <div class="prob-item" role="listitem">
+          <span class="prob-x" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+          </span>
+          <p><b>Files that expire</b> in 30 days and cap your characters. The material you paid for shouldn't rent itself back to you.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="commute-card reveal" aria-label="Weekly commute stats">
+      <span class="stat-label">Weekly commute</span>
+      <div class="commute-big" aria-label="6 hours 40 minutes">6h 40m</div>
+      <div class="commute-cap">40 min each way · 5 days a week</div>
+      <div class="commute-track" aria-hidden="true">
+        <div class="ctr"><span class="ctr-lbl">Listening</span><div class="ctr-bar"><i style="width:100%;background:var(--accent)"></i></div></div>
+        <div class="ctr"><span class="ctr-lbl">Reading</span><div class="ctr-bar"><i style="width:0%;background:var(--accent)"></i></div></div>
+        <div class="ctr"><span class="ctr-lbl">Wasted</span><div class="ctr-bar"><i style="width:88%;background:rgba(255,255,255,.22)"></i></div></div>
+      </div>
+      <p style="margin:22px 0 0;font-size:14px;color:var(--ink-2-on-night);line-height:1.5;">That's most of a working day, every week, with your textbook sitting in your bag.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── WEDGE ─────────── -->
+<section class="sec-pad" id="wedge" aria-labelledby="wedge-heading">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">The difference</span>
+      <h2 id="wedge-heading" class="sec-title">It reads the whole book. Not a summary of it.</h2>
+      <p class="sec-sub">Most tools give you a tidy overview and call it studying. studiwize narrates the actual text you uploaded — every chapter, in order — then builds a study guide on top so you can review what you heard.</p>
+    </div>
+
+    <div class="compare" role="list">
+      <div class="cmp them reveal" role="listitem">
+        <span class="cmp-tag">The summary apps</span>
+        <h3>A 12-minute overview</h3>
+        <ul>
+          <li><span class="mk" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--ink-3)" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span> Two AI hosts chat about the gist</li>
+          <li><span class="mk" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--ink-3)" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span> Skips the details you'll be tested on</li>
+          <li><span class="mk" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--ink-3)" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span> No way to follow the source page-by-page</li>
+        </ul>
+      </div>
+      <div class="cmp us reveal" role="listitem">
+        <span class="cmp-tag">studiwize</span>
+        <h3>The entire text, listenable</h3>
+        <ul>
+          <li><span class="mk" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span> Every word of your upload, chapter-marked</li>
+          <li><span class="mk" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span> A study guide that maps back to the source</li>
+          <li><span class="mk" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span> Yours to keep — no caps, no expiry</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── HOW IT WORKS ─────────── -->
+<section class="how sec-pad" id="how" aria-labelledby="how-heading">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">How it works</span>
+      <h2 id="how-heading" class="sec-title">One upload. Two ways to study.</h2>
+      <p class="sec-sub">Drop in a file you own. studiwize does the rest — and hands you both an audio version and a desk-ready guide.</p>
+    </div>
+
+    <div class="how-stage">
+      <div class="steps" role="tablist" aria-label="How it works steps">
+        <div class="step on" data-step="0" role="tab" aria-selected="true" tabindex="0">
+          <span class="step-n" aria-hidden="true">1</span>
+          <div>
+            <h4>Upload your file</h4>
+            <p>Any PDF or EPUB you already own. No library to browse, no catalog — bring your own.</p>
+          </div>
+          <span class="step-prog" aria-hidden="true"></span>
+        </div>
+        <div class="step" data-step="1" role="tab" aria-selected="false" tabindex="-1">
+          <span class="step-n" aria-hidden="true">2</span>
+          <div>
+            <h4>We build it out</h4>
+            <p>The full text is narrated and split into chapters, while a study guide is written alongside it.</p>
+          </div>
+          <span class="step-prog" aria-hidden="true"></span>
+        </div>
+        <div class="step" data-step="2" role="tab" aria-selected="false" tabindex="-1">
+          <span class="step-n" aria-hidden="true">3</span>
+          <div>
+            <h4>Listen, then review</h4>
+            <p>Audio for the commute. Summary and review questions for when you're back at a desk.</p>
+          </div>
+          <span class="step-prog" aria-hidden="true"></span>
+        </div>
+      </div>
+
+      <div class="how-view reveal" aria-live="polite">
+        <!-- step 0: upload -->
+        <div class="how-panel show" data-panel="0" role="tabpanel">
+          <div class="drop" id="howDrop">
+            <span class="drop-ico" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4M12 4l-4 4M12 4l4 4"/><path d="M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+            </span>
+            <h5>Drop your textbook here</h5>
+            <p>PDF or EPUB · up to 600 pages</p>
+            <span class="pill">files you own</span>
+          </div>
+          <div class="file-chip" id="howChip" style="display:none;">
+            <span class="fi">PDF</span>
+            <span class="fmeta"><b>Microeconomics.pdf</b><span>312 pages · 28.4 MB</span></span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg>
+          </div>
+        </div>
+        <!-- step 1: processing -->
+        <div class="how-panel" data-panel="1" role="tabpanel" hidden>
+          <div style="width:100%;max-width:340px;text-align:center;">
+            <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:6px;">
+              <span class="mark" style="font-size:34px" aria-hidden="true"></span>
+            </div>
+            <h5 style="font-family:var(--font-display);font-weight:600;font-size:17px;margin:8px 0 4px;">Building your audio &amp; guide</h5>
+            <p style="font-size:13.5px;color:var(--ink-3);margin:0 0 4px;">Narrating chapter 7 of 10 · writing study guide</p>
+            <div class="proc-bar" role="progressbar" aria-label="Processing progress" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"><i id="howProc"></i></div>
+            <div style="display:flex;justify-content:space-between;margin-top:10px;font-family:var(--font-mono);font-size:11px;color:var(--ink-3);" aria-hidden="true">
+              <span>~11 hrs of audio</span><span>312 pages</span>
+            </div>
+          </div>
+        </div>
+        <!-- step 2: artifacts -->
+        <div class="how-panel" data-panel="2" role="tabpanel" hidden>
+          <div class="artifacts">
+            <div class="art audio">
+              <span class="art-ico" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14v-2a9 9 0 0 1 18 0v2"/><rect x="3" y="14" width="4" height="6" rx="1.5"/><rect x="17" y="14" width="4" height="6" rx="1.5"/></svg>
+              </span>
+              <b>Chapter audio</b>
+              <small>11h 04m · 10 ch</small>
+              <div class="lines" aria-hidden="true"><i></i><i style="width:70%"></i><i style="width:85%"></i></div>
+            </div>
+            <div class="art guide">
+              <span class="art-ico" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/><path d="M14 3v4h4M8.5 13h7M8.5 17h5"/></svg>
+              </span>
+              <b>Study guide</b>
+              <small>summary + 42 Qs</small>
+              <div class="lines" aria-hidden="true"><i></i><i style="width:80%"></i><i style="width:60%"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── WAITLIST ─────────── -->
+<section class="waitlist sec-pad" id="waitlist" aria-labelledby="waitlist-heading">
+  <div class="wrap wait-in">
+    <span class="eyebrow reveal">iOS · coming soon</span>
+    <h2 id="waitlist-heading" class="sec-title reveal">Coming to iPhone.<br />Join the list.</h2>
+    <p class="sec-sub reveal">studiwize runs in your browser today and installs to your home screen. The native iOS app is next — leave your email and you'll be first in.</p>
+
+    <form class="wait-form reveal" id="waitForm"
+          action="https://formspree.io/f/xgobrpdd"
+          method="POST"
+          novalidate>
+      <!-- Formspree extras: subject line + spam honeypot -->
+      <input type="hidden" name="_subject" value="studiwize waitlist — new signup" />
+      <input type="text"   name="_gotcha"  style="display:none" tabindex="-1" autocomplete="off" />
+      <input type="hidden" name="source"   value="landing-page-waitlist" />
+
+      <label for="waitEmail" class="sr-only">Email address</label>
+      <input class="wait-input" id="waitEmail" name="email"
+             type="email" placeholder="you@school.edu"
+             autocomplete="email" required
+             aria-required="true" aria-describedby="waitNote" />
+      <button class="btn btn-primary" type="submit">Join the waitlist</button>
+    </form>
+    <div class="wait-note reveal" id="waitNote"
+         role="status" aria-live="polite"
+         data-default="No spam. One email when the app ships.">No spam. One email when the app ships.</div>
+
+    <div class="wait-success" id="waitSuccess" role="status" aria-live="polite">
+      <span class="ws-check" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg>
+      </span>
+      <div>
+        <b>You're on the list.</b>
+        <span>We'll email <strong id="wsEmail"></strong> the day studiwize lands on iPhone.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── FOOTER ─────────── -->
+<footer class="foot" role="contentinfo">
+  <div class="wrap foot-in">
+    <div>
+      <a class="wm" href="#top" aria-label="studiwize home">
+        <span class="mark" style="font-size:26px" aria-hidden="true"></span>
+        <span class="wm-text">studi<b>wize</b></span>
+      </a>
+      <p class="foot-tag">The full book, built for students. Turn the reading you already own into audio for the commute.</p>
+    </div>
+    <div class="foot-meta">
+      <span>studiwize.com</span>
+      <a href="#how">How it works</a>
+      <a href="#waitlist">iOS waitlist</a>
+      <span>use files you own</span>
+    </div>
+  </div>
+</footer>
+
+</main>
+
+<script src="lib/landing.js"></script>
+</body>
+</html>

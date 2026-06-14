@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="32" height="32" role="img" aria-label="studiwize">
+  <!-- squircle background -->
+  <rect x="0" y="0" width="100" height="100" rx="25" ry="25" fill="#15212C"/>
+  <!-- page spine -->
+  <rect x="29" y="24" width="6.5" height="52" rx="3.2" fill="rgba(255,255,255,0.30)"/>
+  <!-- play triangle (teal accent) -->
+  <polygon points="47,32 73,50 47,68" fill="#10B3A2"/>
+</svg>

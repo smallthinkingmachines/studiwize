@@ -1,0 +1,156 @@
+/* studiwize — shared brand foundation
+   Type: Sora (display/wordmark), DM Sans (UI/body), DM Mono (technical labels)
+   Light-led, warm-neutral paper base, deep navy-slate ink, one teal accent.
+   Fonts loaded non-blocking via <link> preconnect in index.html — no @import here. */
+
+:root {
+  /* fonts — committed production defaults */
+  --font-display: 'Sora', system-ui, sans-serif;
+  --font-ui:      'DM Sans', system-ui, sans-serif;
+  --font-mono:    'DM Mono', ui-monospace, monospace;
+
+  /* shapes — committed defaults (accent/radius previously tweakable via dev panel) */
+  --radius:   16px;
+  --radius-lg: 24px;
+
+  /* surfaces */
+  --paper:    #F4F1EA;   /* warm off-white base */
+  --paper-2:  #FBF9F4;   /* raised card */
+  --paper-3:  #FFFFFF;   /* pure card */
+
+  /* ink */
+  --ink:    #15212C;     /* deep navy-slate — primary text + brand */
+  --ink-80: #2A3742;
+  --ink-2:  #54616B;     /* secondary text */
+  --ink-3:  #8B959C;     /* faint / captions */
+  --line:   rgba(21, 33, 44, 0.10);
+  --line-2: rgba(21, 33, 44, 0.16);
+
+  /* accent — teal */
+  --accent:      #10B3A2;   /* play / primary CTA */
+  --accent-deep: #0A786E;   /* accent text on light */
+  --on-accent:   #052420;   /* text on accent fills */
+
+  /* dark surfaces (audio player / night) */
+  --night:    #0E1822;
+  --night-2:  #16242F;
+  --night-3:  #1E2F3B;
+  --night-line: rgba(255,255,255,0.10);
+  --paper-on-night: #EAF0F2;
+  --ink-2-on-night: #9DAAB2;
+
+  --shadow-sm: 0 1px 2px rgba(21,33,44,.05), 0 2px 8px rgba(21,33,44,.04);
+  --shadow-md: 0 2px 6px rgba(21,33,44,.06), 0 14px 38px rgba(21,33,44,.09);
+  --shadow-lg: 0 30px 70px rgba(21,33,44,.16), 0 8px 24px rgba(21,33,44,.08);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font-ui);
+  color: var(--ink);
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ── type scale ─────────────────────────────────────────── */
+.display {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.02;
+}
+.eyebrow {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 12.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.stat-label {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* ── wordmark ───────────────────────────────────────────── */
+.wm {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  font-family: var(--font-display);
+  color: var(--ink);
+  text-decoration: none;
+  line-height: 1;
+}
+.wm-text {
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  font-size: 1.5em;
+}
+.wm-text b { font-weight: 700; }
+.wm-text .accent { color: var(--accent-deep); }
+
+/* ── app icon mark (squircle: page spine + play) ────────── */
+/* Inner shapes are injected as inline SVG (see injectMarks) so they render
+   reliably in browsers, html-to-image captures, and PDF/PPTX exports. */
+.mark {
+  --m: 1em;
+  width: var(--m);
+  height: var(--m);
+  border-radius: 25%;
+  background: var(--ink);
+  position: relative;
+  flex: none;
+  display: inline-block;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04);
+}
+.mark svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.mark .mk-spine { fill: rgba(255,255,255,0.30); }
+.mark .mk-play  { fill: var(--accent); }
+
+/* ── shared buttons ─────────────────────────────────────── */
+.btn {
+  appearance: none;
+  border: 0;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 12px;
+  padding: 14px 22px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  transition: transform .15s cubic-bezier(.3,.7,.4,1), background .15s, box-shadow .2s, border-color .15s;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.btn:active { transform: translateY(1px); }
+.btn-primary {
+  background: var(--accent);
+  color: var(--on-accent);
+  box-shadow: 0 1px 2px rgba(5,36,32,.18), 0 8px 22px color-mix(in oklab, var(--accent) 38%, transparent);
+}
+.btn-primary:hover { background: color-mix(in oklab, var(--accent) 92%, #000); }
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 1.5px solid var(--line-2);
+}
+.btn-ghost:hover { border-color: var(--ink); background: rgba(21,33,44,0.03); }
+.btn-dark {
+  background: var(--ink);
+  color: var(--paper);
+}
+.btn-dark:hover { background: var(--ink-80); }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
