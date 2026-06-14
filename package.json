@@ -1,0 +1,11 @@
+{
+  "name": "studiwize",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "generate:og": "node scripts/generate-og.js"
+  },
+  "devDependencies": {
+    "puppeteer": "^22.15.0"
+  }
+}
