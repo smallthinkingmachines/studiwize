@@ -29,7 +29,7 @@
   /* accent — teal */
   --accent:      #10B3A2;   /* play / primary CTA */
   --accent-deep: #0A786E;   /* accent text on light */
-  --on-accent:   #052420;   /* text on accent fills */
+  --on-accent:   #ffffff;   /* text on accent fills */
 
   /* dark surfaces (audio player / night) */
   --night:    #0E1822;

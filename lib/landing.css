@@ -58,6 +58,7 @@ section { position: relative; }
   margin: 22px 0 0; max-width: 30ch;
 }
 .hero-cta { display: flex; gap: 12px; margin-top: 32px; flex-wrap: wrap; }
+.hero-pre { margin: 12px 0 0; font-size: 13px; color: var(--ink-3); letter-spacing: 0.01em; }
 .hero-meta {
   margin-top: 26px; display: flex; gap: 22px; flex-wrap: wrap;
   font-size: 14px; color: var(--ink-3);
