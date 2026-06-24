@@ -23,6 +23,74 @@
 <meta name="twitter:description" content="Turn a PDF or EPUB you already own into chapter-marked audio for your commute, plus a study guide for review. Coming to iOS — join the list." />
 <meta name="twitter:image"       content="https://studiwize.com/og-image.png" />
 
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://studiwize.com/#org",
+      "name": "studiwize",
+      "url": "https://studiwize.com/",
+      "logo": "https://studiwize.com/og-image.png"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://studiwize.com/#site",
+      "url": "https://studiwize.com/",
+      "name": "studiwize",
+      "description": "Turn a PDF or EPUB you already own into chapter-marked audio for your commute, plus a study guide for review.",
+      "publisher": { "@id": "https://studiwize.com/#org" }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "studiwize",
+      "applicationCategory": "EducationApplication",
+      "operatingSystem": "iOS",
+      "url": "https://studiwize.com/",
+      "description": "Upload a PDF or EPUB you own and studiwize turns the full text into chapter-marked audio plus a study guide. Coming to iOS.",
+      "publisher": { "@id": "https://studiwize.com/#org" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What files can I upload?",
+          "acceptedAnswer": { "@type": "Answer", "text": "PDF or EPUB — the formats most textbooks and course readers come in. You bring a file you already own; there's no catalog to buy from." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it okay to upload my textbook?",
+          "acceptedAnswer": { "@type": "Answer", "text": "studiwize is built for files you own — your purchased textbooks, your course PDFs, your own documents. It turns them into audio and a study guide for your personal study. It's not a way to share or redistribute copyrighted material." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it really read the whole book?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. It narrates the actual text you uploaded, chapter by chapter, in order — not a summary of it. The study guide is built on top so you can review after you listen." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it work offline?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Once a book is built, the audio is yours on the device — no signal needed on the train, the plane, or the dead zone on your commute." }
+        },
+        {
+          "@type": "Question",
+          "name": "When does it launch?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The iOS app is in active development. Join the waitlist and you'll get one email the day it lands on the App Store." }
+        },
+        {
+          "@type": "Question",
+          "name": "iPhone only, or web too?",
+          "acceptedAnswer": { "@type": "Answer", "text": "iOS first — it's where the commute-and-listen habit lives. Join the list and we'll keep you posted as that expands." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
 <!-- Theme -->
 <meta name="theme-color" content="#F4F1EA" />
 
@@ -55,6 +123,7 @@
       <a class="navlink" href="#problem">Why</a>
       <a class="navlink" href="#wedge">The difference</a>
       <a class="navlink" href="#how">How it works</a>
+      <a class="navlink" href="#faq">FAQ</a>
       <a class="btn btn-primary nav-cta" href="#waitlist" aria-label="Get early access">
         <span class="nav-cta-full">Get early access</span>
         <span class="nav-cta-compact" aria-hidden="true">Join list</span>
@@ -91,7 +160,7 @@
         <div class="trust-row">
           <div class="trust-item">
             <span class="trust-num">11 hrs</span>
-            <span class="trust-cap">a 300-page textbook, listenable</span>
+            <span class="trust-cap">a 312-page textbook, listenable</span>
           </div>
           <div class="trust-item">
             <span class="trust-num">1 upload</span>
@@ -335,6 +404,43 @@
   </div>
 </section>
 
+<!-- ─────────── FAQ ─────────── -->
+<section class="faq sec-pad" id="faq" aria-labelledby="faq-heading">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Questions</span>
+      <h2 id="faq-heading" class="sec-title">The things people ask first.</h2>
+    </div>
+
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <h3>What files can I upload?</h3>
+        <p>PDF or EPUB — the formats most textbooks and course readers come in. You bring a file you already own; there's no catalog to buy from.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is it okay to upload my textbook?</h3>
+        <p>studiwize is built for files you own — your purchased textbooks, your course PDFs, your own documents. It turns them into audio and a study guide for your personal study. It's not a way to share or redistribute copyrighted material.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does it really read the whole book?</h3>
+        <p>Yes. It narrates the actual text you uploaded, chapter by chapter, in order — not a summary of it. The study guide is built on top so you can review after you listen.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does it work offline?</h3>
+        <p>Once a book is built, the audio is yours on the device — no signal needed on the train, the plane, or the dead zone on your commute.</p>
+      </div>
+      <div class="faq-item">
+        <h3>When does it launch?</h3>
+        <p>The iOS app is in active development. Join the waitlist and you'll get one email the day it lands on the App Store — that's how you'll know first.</p>
+      </div>
+      <div class="faq-item">
+        <h3>iPhone only, or web too?</h3>
+        <p>iOS first — it's where the commute-and-listen habit lives. Join the list and we'll keep you posted as that expands.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ─────────── WAITLIST ─────────── -->
 <section class="waitlist sec-pad" id="waitlist" aria-labelledby="waitlist-heading">
   <div class="wrap wait-in">
@@ -388,7 +494,8 @@
       <span>studiwize.com</span>
       <a href="#how">How it works</a>
       <a href="#waitlist">iOS waitlist</a>
-      <span>use files you own</span>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
     </div>
   </div>
 </footer>
