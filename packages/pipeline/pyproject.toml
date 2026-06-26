@@ -1,0 +1,44 @@
+[project]
+name = "studiwize-pipeline"
+version = "0.0.0"
+description = "studiwize core pipeline: PDF/EPUB -> chapter-marked M4B audio + LLM study guide. Library + CLI (open-core seam)."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "TBD" }
+dependencies = [
+    "pydantic>=2.7",
+]
+
+# Heavy/optional deps are grouped so Phase 0 spikes can install only what each needs.
+[project.optional-dependencies]
+extract = [
+    "docling>=2.0",        # primary extractor (MIT) — structured Markdown/JSON incl. headings
+    "pymupdf>=1.24",       # fast text-layer fallback (AGPL — server-side only)
+    "ebooklib>=0.18",      # EPUB parsing + ToC
+    "beautifulsoup4>=4.12", # EPUB HTML -> text
+]
+tts = [
+    "replicate>=0.34",     # hosted Kokoro path A
+    "httpx>=0.27",         # hosted Kokoro path B (DeepInfra) + OpenAI adapter
+]
+studyguide = [
+    "anthropic>=0.40",     # claude-haiku-4-5 Batch API
+]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.6",
+]
+
+[project.scripts]
+studiwize = "studiwize_pipeline.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/studiwize_pipeline"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

@@ -1,0 +1,11 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/
+
+# Phase 0 spike inputs/outputs — user-supplied (copyrighted) files + large audio
+spikes/samples/
+spikes/out/
