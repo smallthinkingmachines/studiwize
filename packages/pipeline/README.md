@@ -15,14 +15,19 @@ output location, and returns structured results. The hosted product's API/worker
 
 ```
 src/studiwize_pipeline/
-  document/    Document, Chapter, Chunk (Pydantic) — the shared structured model
-  extract/     ExtractorProtocol; DoclingExtractor, PyMuPDFExtractor   (Phase 1)
+  document/    Document, Chapter, Block (Pydantic) — the shared structured model  ✓
+  extract/     Extractor protocol; Docling/PyMuPDF/Epub adapters    (stubbed)
   chunk/       chapter/section/paragraph chunking strategies            (Phase 1)
-  tts/         TTSProvider protocol; Kokoro + OpenAI adapters           (Phase 1)
+  tts/         TTSProvider protocol; Kokoro + OpenAI adapters       (stubbed)
   assemble/    ffmpeg M4B writer (chapter atoms), silence-pacing        (Phase 1)
   studyguide/  StudyGuideProvider protocol; Haiku Batch                 (Phase 1)
   pipeline.py  orchestration (pure functions; fs/stream I/O only)       (Phase 1)
   cli.py       `studiwize book.pdf -o out.m4b`                          (Phase 1)
+
+**Stubbed** = the provider boundary (Protocol) + concrete adapter classes exist and
+are tested, but `extract()` / `synthesize()` raise `NotImplementedError`. The working
+logic lives in the Phase 0 spikes and gets promoted into these adapters once the
+spikes ratify the engine (0a -> extractor) and TTS provider (0b -> D-005).
 spikes/        Phase 0 de-risking scripts (throwaway, run locally)
 ```
 
