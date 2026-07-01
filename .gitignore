@@ -3,3 +3,10 @@ node_modules/
 result
 .DS_Store
 *.local
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/

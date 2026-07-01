@@ -1,0 +1,12 @@
+[project]
+name = "studiwize"
+version = "0.0.0"
+description = "studiwize — PDF/EPUB to chapter-marked audiobook + LLM study guide"
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.uv]
+package = false
+
+[tool.uv.workspace]
+members = ["packages/pipeline", "services/worker"]
